@@ -1,7 +1,7 @@
 ;;;; These are macros which allow for creation of procedures.
 
-(in-package :clamp)
-(use-syntax :clamp)
+(in-package :clump)
+(use-syntax :clump)
 
 (mac rfn (name parms &body body)
   "Creates a recursive procedure which can refer to itself through

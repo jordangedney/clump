@@ -1,10 +1,10 @@
-(defpackage :clamp-experimental-tests
-  (:use :clunit :clamp :clamp-experimental)
+(defpackage :clump-experimental-tests
+  (:use :clunit :clump :clump-experimental)
   (:import-from :syntax :use-syntax)
   (:nicknames :experimental-tests)
-  (:shadowing-import-from :clamp-experimental
+  (:shadowing-import-from :clump-experimental
      :def :defmemo :defmethod :mac :fn :coerce))
 
-(in-package :clamp-experimental-tests)
+(in-package :clump-experimental-tests)
 
-(defsuite clamp-experimental ())
+(defsuite clump-experimental ())

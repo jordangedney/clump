@@ -1,11 +1,11 @@
 (in-package :asdf-user)
 
-(defsystem "clamp-tests"
-  :description "tests for clamp"
-  :depends-on ("clunit" "check-it" "clamp" "clamp-experimental")
+(defsystem "clump-tests"
+  :description "tests for clump"
+  :depends-on ("clunit" "check-it" "clump" "clump-experimental")
   :serial t
   :components ((:module "tests"
-                :components ((:file "clamp-suite")
+                :components ((:file "clump-suite")
                              (:file "base-suite")
                              (:file "binding-suite")
                              (:file "conditionals-suite")
@@ -23,12 +23,12 @@
                              (:file "sort-suite")
                              (:file "io-suite")
 
-                             (:file "clamp-experimental-suite")
+                             (:file "clump-experimental-suite")
                              (:file "destructuring-suite")
                              (:file "coerce-suite")
                              (:file "ssyntax-suite")
                              (:file "lisp1-suite")))))
 
-(defmethod perform ((op test-op) (c (eql (find-system :clamp-tests))))
-  (let ((*package* (find-package :clamp-tests)))
-    (print (symbol-call :clamp-tests :run-suite (intern* :clamp :clamp-tests)))))
+(defmethod perform ((op test-op) (c (eql (find-system :clump-tests))))
+  (let ((*package* (find-package :clump-tests)))
+    (print (symbol-call :clump-tests :run-suite (intern* :clump :clump-tests)))))

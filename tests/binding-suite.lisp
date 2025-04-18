@@ -1,7 +1,7 @@
-(in-package :clamp-tests)
-(use-syntax :clamp)
+(in-package :clump-tests)
+(use-syntax :clump)
 
-(defsuite binding (clamp))
+(defsuite binding (clump))
 
 (deftest with (binding)
   (assert-eql 6 (with (a 1 b 2 c 3) (+ a b c)))

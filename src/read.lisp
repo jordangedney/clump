@@ -1,7 +1,7 @@
 ;;;; These are utilities that make it easier to read input.
 
-(in-package :clamp)
-(use-syntax :clamp)
+(in-package :clump)
+(use-syntax :clump)
 
 (def readb (&key (from *standard-input*) (eof nil eof-p))
   "Reads a byte from FROM. If this reaches the end of the file,

@@ -1,7 +1,7 @@
 ;;;; Utilities for specific kinds of sorting.
 
-(in-package :clamp)
-(use-syntax :clamp)
+(in-package :clump)
+(use-syntax :clump)
 
 (def compare (comparer scorer)
   "Returns a procedure which compares its arguments score from SCORER

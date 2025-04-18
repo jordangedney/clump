@@ -1,7 +1,7 @@
-(in-package :clamp-tests)
-(use-syntax :clamp)
+(in-package :clump-tests)
+(use-syntax :clump)
 
-(defsuite macros (clamp))
+(defsuite macros (clump))
 
 (deftest mkstr (macros)
   (assert-equalp "AbcDE5" (mkstr 'a "bc" 'de 5))

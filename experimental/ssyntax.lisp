@@ -1,7 +1,7 @@
 ;;;; This is an experimental implementation of ssyntax.
 
 (in-package :experimental)
-(use-syntax :clamp)
+(use-syntax :clump)
 
 ;;;; By surrounding code with the w/ssyntax macro, ssyntax is
 ;;;; transformed into the corresponding code. To implement your own

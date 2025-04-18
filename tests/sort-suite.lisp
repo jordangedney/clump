@@ -1,7 +1,7 @@
-(in-package :clamp-tests)
-(use-syntax :clamp)
+(in-package :clump-tests)
+(use-syntax :clump)
 
-(defsuite sort (clamp))
+(defsuite sort (clump))
 
 (deftest compare (sort)
   (assert-true  (call (compare #'< #'len) '(1 2) '(1 2 3)))

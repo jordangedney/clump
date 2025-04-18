@@ -2,8 +2,8 @@
 ;;;; to defining a structure. If no initial value is given, slots
 ;;;; default to nil.
 
-(in-package :clamp)
-(use-syntax :clamp)
+(in-package :clump)
+(use-syntax :clump)
 
 (defclass template () ()
   (:documentation "The template base class."))

@@ -1,7 +1,7 @@
-(in-package :clamp-tests)
-(use-syntax :clamp)
+(in-package :clump-tests)
+(use-syntax :clump)
 
-(defsuite read (clamp))
+(defsuite read (clump))
 
 (deftest readc (read)
   (fromstring "hello"

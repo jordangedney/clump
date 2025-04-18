@@ -1,7 +1,7 @@
 (in-package :experimental-tests)
-(use-syntax :clamp)
+(use-syntax :clump)
 
-(deftest notf (clamp-experimental)
+(deftest notf (clump-experimental)
   (w/ssyntax
     (assert-true  (~idfn nil))
     (assert-false (~idfn t))
@@ -14,7 +14,7 @@
     (assert-true  (~or nil nil nil))
     (assert-false (~or nil nil t))))
 
-(deftest andf (clamp-experimental)
+(deftest andf (clump-experimental)
   (w/ssyntax
     (assert-false (integerp&plusp -5.5))
     (assert-false (integerp&plusp 5.5))
@@ -25,13 +25,13 @@
     (assert-false (integerp&plusp&even 5.5))
     (assert-false (integerp&plusp&even -4))))
 
-(deftest compose (clamp-experimental)
+(deftest compose (clump-experimental)
   (w/ssyntax
     (assert-equal '((5 . 10)) (list+cons 5 10))
     (assert-equal '(6)        (list+inc 5))
     (assert-equal '(((1)))    (list+list+list 1))))
 
-(deftest access (clamp-experimental)
+(deftest access (clump-experimental)
   (w/ssyntax
     (let xs '((1 2 3) (4 5 6) (7 8 9))
       (assert-equal '(1 2 3) xs.0)

@@ -1,7 +1,7 @@
 ;;;; These are utilities for working with procedures.
 
-(in-package :clamp)
-(use-syntax :clamp)
+(in-package :clump)
+(use-syntax :clump)
 
 (def compose (&rest fns)
   "Composes procedures. For example

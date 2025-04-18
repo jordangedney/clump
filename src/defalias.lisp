@@ -1,7 +1,7 @@
 ;;;; Definitions for defalias which allows redefinition of
 ;;;; macros, procedures, and special forms.
 
-(in-package :clamp)
+(in-package :clump)
 
 (defun macrop (x)
   "Is this a macro?"

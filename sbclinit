@@ -2,6 +2,6 @@
 ;;   $ sbcl --sysinit sbclinit
 
 (load "~/quicklisp/setup.lisp")
-(ql:quickload :clamp)
-(in-package :clamp)
-(use-syntax :clamp)
+(ql:quickload :clump)
+(in-package :clump)
+(use-syntax :clump)

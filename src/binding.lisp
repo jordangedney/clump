@@ -1,7 +1,8 @@
 ;;;; These are utilities for binding variables.
 
-(in-package :clamp)
-(use-syntax :clamp)
+(in-package :clump)
+(use-syntax :clump)
+(withs  (a 4 b (+ a 5)) (print b))
 
 (mac with (&whole whole parms &body body)
   "Equivalent to cl:let, but does not require parens around each
@@ -18,7 +19,7 @@
   `(with (,var ,val) ,@body))
 
 (mac ret (var val &body body)
-  "Equivalent to clamp:let, but the result of a ret expression is the
+  "Equivalent to clump:let, but the result of a ret expression is the
    final value of VAR."
   `(let ,var ,val ,@body ,var))
 
@@ -38,9 +39,11 @@
   "Equivalent to flet, but only for one procedure definition."
   `(flet ((,name ,args ,fbody)) ,@body))
 
+(withs () )
+
 (mac withs (parms &body body)
   "Equivalent to let*, but allows destructuring."
   (if (no parms)
       `(do ,@body)
       `(let ,(car parms) ,(cadr parms)
-	 (withs ,(cddr parms) ,@body))))
+	       (withs ,(cddr parms) ,@body))))

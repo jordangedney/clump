@@ -1,7 +1,7 @@
 (in-package :experimental-tests)
-(use-syntax :clamp)
+(use-syntax :clump)
 
-(defsuite destructuring (clamp-experimental))
+(defsuite destructuring (clump-experimental))
 
 (deftest regular (destructuring)
   (let f (fn fn fn)
@@ -16,7 +16,7 @@
   (let f (fn (a b c . d) (list a b c d))
     (assert-equal '(1 2 3 (4 5)) (call f 1 2 3 4 5))))
 
-(deftest optional (clamp-experimental)
+(deftest optional (clump-experimental)
   (let f (fn (a (b c) &optional ((d e) '(1 2))) (list a b c d e))
     (assert-equal '(1 2 3 1 2) (call f 1 '(2 3)))
     (assert-equal '(1 2 3 4 5) (call f 1 '(2 3) '(4 5)))))

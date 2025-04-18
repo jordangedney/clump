@@ -1,7 +1,7 @@
-(defpackage :clamp-tests
-  (:use :clamp :clunit :check-it)
+(defpackage :clump-tests
+  (:use :clump :clunit :check-it)
   (:import-from :syntax :use-syntax))
 
-(in-package :clamp-tests)
+(in-package :clump-tests)
 
-(defsuite clamp ())
+(defsuite clump ())

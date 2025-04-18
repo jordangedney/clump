@@ -1,7 +1,7 @@
 ;;;; This is an experimental implementation of argument destructuring.
 
 (in-package :experimental)
-(use-syntax :clamp)
+(use-syntax :clump)
 
 ;;;; Right now this implements a basic form of argument destructuring
 ;;;; and allows shorter names for the different kinds of arguments (?
@@ -91,7 +91,7 @@
         finally (return (values new-args alist))))
 
 (defmacro fn (args &body body)
-  "Same as clamp:fn but allows ?, !, and argument destructuring."
+  "Same as clump:fn but allows ?, !, and argument destructuring."
   (mvb (new-args alist) (parse-args args)
     (if (null alist)
         `(lambda ,new-args ,@body)

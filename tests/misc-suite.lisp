@@ -1,7 +1,7 @@
-(in-package :clamp-tests)
-(use-syntax :clamp)
+(in-package :clump-tests)
+(use-syntax :clump)
 
-(defsuite misc (clamp))
+(defsuite misc (clump))
 
 (deftest ado (misc)
   (assert-eql 338350 (ado (range 1 100)

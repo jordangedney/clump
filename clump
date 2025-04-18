@@ -12,7 +12,7 @@ fi
 
 if which rlwrap >&/dev/null
 then
-  RLWRAP='rlwrap --complete-filenames --quote-character "\"" --remember --break-chars "[]()!:~\"" -C clamp'
+  RLWRAP='rlwrap --complete-filenames --quote-character "\"" --remember --break-chars "[]()!:~\"" -C clump'
 fi
 
 $RLWRAP sbcl --sysinit ~/quicklisp/local-projects/Clamp/sbclinit

@@ -1,7 +1,7 @@
 ;;;; These are some basic utilities which need to be loaded first.
 
-(in-package :clamp)
-(use-syntax :clamp)
+(in-package :clump)
+(use-syntax :clump)
 
 (def map (f seq &rest seqs)
   "Maps F over the sequences. The returned sequence will always be of

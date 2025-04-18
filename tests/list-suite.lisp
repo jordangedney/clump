@@ -1,7 +1,7 @@
-(in-package :clamp-tests)
-(use-syntax :clamp)
+(in-package :clump-tests)
+(use-syntax :clump)
 
-(defsuite list (clamp))
+(defsuite list (clump))
 
 (deftest mklist (list)
   (assert-true (check-it (generator (or (integer) (list (integer))))

@@ -1,7 +1,7 @@
-(in-package :clamp-tests)
-(use-syntax :clamp)
+(in-package :clump-tests)
+(use-syntax :clump)
 
-(defsuite hof (clamp))
+(defsuite hof (clump))
 
 (deftest testify (hof)
   (assert-true  (call (testify 5) 5))

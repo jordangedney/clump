@@ -4,8 +4,8 @@
 ;;;; based library. Using such a library removes the purpose of most
 ;;;; of the Arc utilities for string searching.
 
-(in-package :clamp)
-(use-syntax :clamp)
+(in-package :clump)
+(use-syntax :clump)
 
 (defalias string mkstr)
 (deftype string () 'cl:string)

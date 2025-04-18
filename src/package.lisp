@@ -1,7 +1,7 @@
-;;;; This is the package declaration for clamp.
+;;;; This is the package declaration for clump.
 
-(defpackage :clamp
-  (:nicknames :clamp)
+(defpackage :clump
+  (:nicknames :clump)
   (:use :common-lisp :iterate)
   (:shadow :do :map :if :case := :ccase :ecase :typecase :rem :let
            :find :count :sort :++ :read :read-line :get :set
@@ -18,6 +18,9 @@
    :upcase :all :maptable :inc :dec :call :probe-file :bound :digit
    :err :lastcons :doc :seconds :inst :readstring1 :negative :positive
    :after
+
+   ;; From aliases, predicates
+   :list? :integer?
 
    ;; From base.
    :_ :single :if :fn
@@ -97,7 +100,7 @@
    :deftem
 
    ;; Symbols to be exported from the common-lisp package. This
-   ;; makes it easy to import clamp (which shadows some names) and
+   ;; makes it easy to import clump (which shadows some names) and
    ;; still access everything from common-lisp. Some symbols whose
    ;; use is discouraged (such as rplaca) are also removed. Symbols
    ;; which would normally be commented out on the beginning of the
@@ -303,4 +306,8 @@
    :with-package-iterator :with-simple-restart :with-slots
    :with-standard-io-syntax :write :write-byte :write-char :write-line
    :write-sequence :write-string :write-to-string :y-or-n-p :yes-or-no-p
-   :zerop))
+   :zerop
+
+   ;; From threading.
+   :-> :->>
+   ))

@@ -1,7 +1,7 @@
-(in-package :clamp-tests)
-(use-syntax :clamp)
+(in-package :clump-tests)
+(use-syntax :clump)
 
-(defsuite memoize (clamp))
+(defsuite memoize (clump))
 
 (deftest defmemo (memoize)
   (defmemo fib (n)

@@ -1,6 +1,6 @@
-;;;; These are several cl operations which are aliased for clamp.
+;;;; These are several cl operations which are aliased for clump.
 
-(in-package :clamp)
+(in-package :clump)
 
 ;;;; Special Forms
 (defalias after unwind-protect)
@@ -65,3 +65,7 @@
 (defalias trunc truncate)
 (defalias uniq gensym)
 (defalias writec write-char)
+
+;; Predicates:
+(defalias list? listp)
+(defalias integer? integerp)

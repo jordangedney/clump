@@ -1,7 +1,7 @@
-(in-package :clamp-tests)
-(use-syntax :clamp)
+(in-package :clump-tests)
+(use-syntax :clump)
 
-(defsuite strings (clamp))
+(defsuite strings (clump))
 
 (deftest newstring (strings)
   (assert-eql 5 (len (newstring 5)))

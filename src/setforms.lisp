@@ -1,5 +1,5 @@
-(in-package :clamp)
-(use-syntax :clamp)
+(in-package :clump)
+(use-syntax :clump)
 
 
 (def setforms (exp &optional env)

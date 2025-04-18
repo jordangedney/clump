@@ -1,7 +1,7 @@
-(in-package :clamp-tests)
-(use-syntax :clamp)
+(in-package :clump-tests)
+(use-syntax :clump)
 
-(defsuite setforms (clamp))
+(defsuite setforms (clump))
 
 (deftest zap (setforms)
   (assert-eql 100 (ret x 10 (zap [* _ _] x)))

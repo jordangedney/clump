@@ -1,7 +1,7 @@
-(in-package :clamp-tests)
-(use-syntax :clamp)
+(in-package :clump-tests)
+(use-syntax :clump)
 
-(defsuite iter (clamp))
+(defsuite iter (clump))
 
 (deftest rec (iter)
   (assert-eql 55

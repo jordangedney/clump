@@ -1,7 +1,7 @@
-(in-package :clamp-tests)
-(use-syntax :clamp)
+(in-package :clump-tests)
+(use-syntax :clump)
 
-(defsuite conditionals (clamp))
+(defsuite conditionals (clump))
 
 (deftest iflet (conditionals)
   (assert-eql 15 (iflet x 5 (+ x 10)))

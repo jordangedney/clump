@@ -1,5 +1,5 @@
 (in-package :experimental)
-(use-syntax :clamp)
+(use-syntax :clump)
 
 (defmacro defexperimental (new old)
   "Defines a definition special form, NEW, which is the same as the
@@ -14,9 +14,9 @@
                   (let ,(map #'cadr alist) (list ,@(map #'car alist))
                     ,@body)))))))
 
-(defexperimental def clamp:def)
-(defexperimental defmemo clamp:defmemo)
-(defexperimental mac clamp:mac)
+(defexperimental def clump:def)
+(defexperimental defmemo clump:defmemo)
+(defexperimental mac clump:mac)
 
 (mac defmethod (name args &body body)
   "Version of defmethod that allows for ssyntax."

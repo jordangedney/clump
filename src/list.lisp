@@ -1,7 +1,7 @@
 ;;;; These are utilities for working with lists.
 
-(in-package :clamp)
-(use-syntax :clamp)
+(in-package :clump)
+(use-syntax :clump)
 
 (def mklist (x)
   "If X is a list, return it. Otherwise return a list containing X."

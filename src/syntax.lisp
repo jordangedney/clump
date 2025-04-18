@@ -1,6 +1,6 @@
-(in-package :clamp)
+(in-package :clump)
 
-(define-package-syntax :clamp
+(define-package-syntax :clump
   (:merge :standard)
   (:macro-char #\] (get-macro-character #\)))
   (:macro-char #\[ (lambda (stream char)

@@ -1,7 +1,7 @@
-(in-package :clamp-tests)
-(use-syntax :clamp)
+(in-package :clump-tests)
+(use-syntax :clump)
 
-(defsuite tables (clamp))
+(defsuite tables (clump))
 
 (deftest keys (tables)
   (let tab (table)

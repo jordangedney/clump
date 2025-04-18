@@ -1,10 +1,10 @@
 ;;;; These are utilities for conditional branching.
 
-(in-package :clamp)
-(use-syntax :clamp)
+(in-package :clump)
+(use-syntax :clump)
 
 (mac iflet (var &body branches)
-  "Same as clamp:if but if a predicate is true, the value of predicate
+  "Same as clump:if but if a predicate is true, the value of predicate
    is bound to VAR in the corresponding branch."
   (if (no branches)
         nil

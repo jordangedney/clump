@@ -1,6 +1,6 @@
-(defpackage :clamp-experimental
+(defpackage :clump-experimental
   (:nicknames :experimental)
-  (:use :clamp)
+  (:use :clump)
   (:shadow :coerce :def :defmethod :fn :mac :defmemo)
   (:import-from :syntax :use-syntax)
   (:export
@@ -19,5 +19,5 @@
    ;; From def.
    :def :defmemo :defmethod :mac))
 
-;;;; There must be someway to export all of the symbols in clamp
+;;;; There must be someway to export all of the symbols in clump
 ;;;; except for desired symbols.

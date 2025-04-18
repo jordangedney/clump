@@ -1,7 +1,7 @@
-(in-package :clamp-tests)
-(use-syntax :clamp)
+(in-package :clump-tests)
+(use-syntax :clump)
 
-(defsuite base (clamp))
+(defsuite base (clump))
 
 (deftest map (base)
   (assert-true
@@ -38,11 +38,11 @@
   (assert-true
     (check-it (generator (list (integer)))
               (lambda (xs)
-                (is (len (clamp::pair xs))
+                (is (len (clump::pair xs))
                     (ceiling (len xs) 2))))
     (check-it (generator (list (integer)))
               (lambda (xs)
-                (iso (flat (clamp::pair xs)))))))
+                (iso (flat (clump::pair xs)))))))
 
 (deftest if (base)
   (assert-expands (cond (a b) (c d)) (if a b c d))

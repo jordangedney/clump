@@ -1,7 +1,7 @@
-(in-package :clamp-tests)
-(use-syntax :clamp)
+(in-package :clump-tests)
+(use-syntax :clump)
 
-(defsuite print (clamp))
+(defsuite print (clump))
 
 (deftest pr (print)
   (assert-equal "hello world 5"

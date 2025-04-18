@@ -1,7 +1,7 @@
-(in-package :clamp-tests)
-(use-syntax :clamp)
+(in-package :clump-tests)
+(use-syntax :clump)
 
-(defsuite fns (clamp))
+(defsuite fns (clump))
 
 (deftest rfn (fns)
   (let f (rfn fib (n)

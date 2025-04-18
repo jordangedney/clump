@@ -1,7 +1,7 @@
 ;;;; These are utilities for taking advantage of memoization.
 
-(in-package :clamp)
-(use-syntax :clamp)
+(in-package :clump)
+(use-syntax :clump)
 
 (def memo (f)
   "Returns a memoized version of the procedure F."

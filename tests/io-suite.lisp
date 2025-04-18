@@ -1,7 +1,7 @@
-(in-package :clamp-tests)
-(use-syntax :clamp)
+(in-package :clump-tests)
+(use-syntax :clump)
 
-(defsuite io (clamp))
+(defsuite io (clump))
 
 (deftest allchars (io)
   (w/instring in "hello goodbye"

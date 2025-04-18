@@ -1,7 +1,7 @@
 ;;;; These are macros which allow for different kinds of iteration.
 
-(in-package :clamp)
-(use-syntax :clamp)
+(in-package :clump)
+(use-syntax :clump)
 
 (mac repeat (n &body body)
   "Excutes BODY N times."
