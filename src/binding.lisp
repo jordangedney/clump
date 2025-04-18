@@ -2,7 +2,6 @@
 
 (in-package :clump)
 (use-syntax :clump)
-(withs  (a 4 b (+ a 5)) (print b))
 
 (mac with (&whole whole parms &body body)
   "Equivalent to cl:let, but does not require parens around each
