@@ -11,7 +11,7 @@
    ;; From defalias.
    :defalias
    ;; From aliases
-   :def :mac :++ :-- :mvb :mvl :do :do1 :do2 := :is :iso :no :len
+   :def :mac :++ :-- :mvb :mvl :do :do1 :do2 :set :is :iso :no :len
    :map :isa :uniq :even :odd :redup :dedup :table :rand :trunc :join
    :cut :rev :nrev :const :idfn :outstring :inside :instring :errsafe
    :w/file :swap :writec :notf :macex :macex1 :letter :alphadig
@@ -64,7 +64,7 @@
    :rand-choice :point :defs :roundup :nearest :before :calln
 
    ;; From setforms.
-   :setforms :zap :or= :or2= :set :wipe
+   :setforms :zap :or= :or2= :initialize :wipe
 
    ;; From fnops.
    :compose :fif :andf :orf :curry :rcurry :flip

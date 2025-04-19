@@ -25,7 +25,7 @@
    kind of table to be created."
   (ret result (apply #'table args)
     (each (k v) xs
-      (= (gethash k result) v))))
+      (set (gethash k result) v))))
 
 (def tablist (tab)
   "Returns an alist which is equivalent to the table TAB."
@@ -62,7 +62,7 @@
     (maphash
       (fn (k v)
         (when (> v n)
-          (= winner k
+          (set winner k
              n v)))
       (counts seq :test test :key key))
     (values winner n)))
@@ -71,4 +71,4 @@
   "Creates a table with all of the keys in KEYS having the value VAL."
   (ret result (table :test test)
     (each k keys
-      (= (gethash k result) val))))
+      (set (gethash k result) val))))

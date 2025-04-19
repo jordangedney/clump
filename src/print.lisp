@@ -78,5 +78,5 @@
                   (unless (iso ,out "")
                     (if ,needbars
                       (pr bar* ,out)
-                      (do (= ,needbars t)
+                      (do (set ,needbars t)
                           (pr ,out))))))))))

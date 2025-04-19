@@ -9,7 +9,7 @@
 ;;;; Macros
 (defalias ++ incf)
 (defalias -- decf)
-(defalias = setf)
+;; (defalias = setf) replaced by 'set'
 (defalias def defun)
 (defalias digit digit-char-p)
 (defalias do1 prog1)
@@ -20,10 +20,12 @@
 (defalias mac defmacro)
 (defalias mvb multiple-value-bind)
 (defalias mvl multiple-value-list)
+(defalias set setf)
 (defalias swap rotatef)
 (defalias w/file with-open-file)
 
 ;;;; Procedures.
+(defalias = let*)
 (defalias all every)
 (defalias alphadig alphanumericp)
 (defalias bound boundp)

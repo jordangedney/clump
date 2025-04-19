@@ -24,7 +24,7 @@
    order."
   (w/uniq (ghead gtail)
     `(withs (,ghead (list nil) ,gtail ,ghead)
-       (flet1 ,accfn (arg) (= ,gtail (= (cdr ,gtail) (list arg)))
+       (flet1 ,accfn (arg) (set ,gtail (set (cdr ,gtail) (list arg)))
          ,@body
          (cdr ,ghead)))))
 

@@ -13,7 +13,7 @@
   "Defines a memoized procedure."
   `(eval-when (:compile-toplevel :load-toplevel :execute)
      (declaim (ftype (function (&rest t) t) ,name))
-     (= (symbol-function ',name) (memo (fn ,args (block ,name ,@body))))
+     (set (symbol-function ',name) (memo (fn ,args (block ,name ,@body))))
      ,(when (stringp (car body))
-            `(= (documentation ',name 'function) ,(car body)))
+            `(set (documentation ',name 'function) ,(car body)))
      ',name))

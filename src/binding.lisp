@@ -38,11 +38,9 @@
   "Equivalent to flet, but only for one procedure definition."
   `(flet ((,name ,args ,fbody)) ,@body))
 
-(withs () )
-
 (mac withs (parms &body body)
   "Equivalent to let*, but allows destructuring."
   (if (no parms)
       `(do ,@body)
       `(let ,(car parms) ,(cadr parms)
-	       (withs ,(cddr parms) ,@body))))
+	 (withs ,(cddr parms) ,@body))))

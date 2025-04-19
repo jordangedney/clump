@@ -94,10 +94,10 @@
 		  (drain (read :from in :eof nil))))
   (assert-equal '(128 64 32 16 8 4 2)
 		(let x 256
-		  (drain (= x (/ x 2)) 1)))
+		  (drain (set x (/ x 2)) 1)))
   (assert-equal '(100 50)
                 (let x 200
-                  (drain (= x (/ x 2)) #'odd))))
+                  (drain (set x (/ x 2)) #'odd))))
 
 (deftest caris (list)
   (assert-false (caris 5 5))
@@ -141,7 +141,7 @@
   (let tab (obj a 1 b 2)
     (assert-eql 1 (get tab 'a))
     (assert-eql 2 (get tab 'b))
-    (= (get tab 'a) 3)
+    (set (get tab 'a) 3)
     (assert-eql 3 (get tab 'a)))
   (assert-eql 1 (get '(1 2 3) 'car))
   (assert-equal '(2 3) (get '(1 2 3) 'cdr))

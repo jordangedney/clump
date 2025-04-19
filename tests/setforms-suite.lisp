@@ -27,10 +27,10 @@
 
 (deftest set (setforms)
   (let x nil
-    (set x)
+    (initialize x)
     (assert-true x))
   (with (x 5 y (list 1 2 3))
-    (set x (car y) (cadr y))
+    (initialize x (car y) (cadr y))
     (assert-equal '(t t t 3) (cons x y))))
 
 (deftest wipe (setforms)

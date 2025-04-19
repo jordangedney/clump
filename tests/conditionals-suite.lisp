@@ -128,7 +128,7 @@
               (with (x 10 y 10)
                 (switchlet z (+ x y)
                   (- x y) z
-                  (= x 15) 19
+                  (set x 15) 19
                   (+ x 5) (* z z)))))
 
 (deftest switch (conditionals)
@@ -140,5 +140,5 @@
               (with (x 10 y 10)
                 (switch (+ x y)
                   (- x y)  0
-                  (= x 15) 19
+                  (set x 15) 19
                   (+ x 5)  400))))

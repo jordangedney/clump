@@ -144,7 +144,7 @@
 
 (defmethod (setf get) (val (seq sequence) (n integer))
   "Sets the Nth element of SEQ to VAL."
-  (= (elt seq n) val))
+  (set (elt seq n) val))
 
 (defmethod get ((tab hash-table) x)
   "Returns whatever is stored in TAB under X."
@@ -152,7 +152,7 @@
 
 (defmethod (setf get) (val (tab hash-table) x)
   "Sets VAL to be stored under X in TAB."
-  (= (gethash x tab) val))
+  (set (gethash x tab) val))
 
 (defmethod get ((a array) (index integer))
   "If A is a vector, return the corresponding element. Otherwise
@@ -175,7 +175,7 @@
 
 (defmethod (setf get) (val (arr array) (list list))
   "Sets the value when using an list to access into a array."
-  (= (apply #'aref arr list) val))
+  (set (apply #'aref arr list) val))
 
 (defmethod get (obj x)
   "Calls X on OBJECT."

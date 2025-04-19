@@ -21,7 +21,7 @@
           (each elt (cdr xs)
             (let elt-score (call key elt)
               (when (call f elt-score score)
-                (= wins elt
+                (set wins elt
                    score elt-score))))))))
 
 (def bestn (n f seq &optional (key #'identity))

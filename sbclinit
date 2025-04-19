@@ -1,7 +1,13 @@
 ;; startup file for SBCL to load Clamp. Use it like this:
 ;;   $ sbcl --sysinit sbclinit
 
-(load "~/quicklisp/setup.lisp")
+(load "~/.quicklisp/setup.lisp")
 (ql:quickload :clump)
 (in-package :clump)
 (use-syntax :clump)
+(ql:quickload :clump-tests)
+(in-package :clump-tests)
+(run-suite 'clump)
+(print "")
+(print "Finished!")
+(sb-ext:exit)

@@ -40,13 +40,13 @@
          (mvb (,val ,win) ,access
            (,set (if (or ,val ,win) ,val ,new)))))))
 
-(mac set (&rest args)
+(mac initialize (&rest args)
   "Sets every one of its arguments to t."
-  `(do ,@(map (fn (a) `(= ,a t)) args)))
+  `(do ,@(map (fn (a) `(set ,a t)) args)))
 
 (mac wipe (&rest args)
   "Sets every one of its arguments to nil."
-  `(do ,@(map (fn (a) `(= ,a nil)) args)))
+  `(do ,@(map (fn (a) `(set ,a nil)) args)))
 
 (mac pull (test place)
   "Removes all of the elements in PLACE that satisfy test and stores

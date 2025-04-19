@@ -12,7 +12,7 @@
     `(defvar ,var (do1 (iflet ,gf (file-exists ,file)
                               (call ,load ,gf)
                               ,init)
-                    (= (gethash ',var savers*)
+                    (set (gethash ',var savers*)
                        (fn (,gv)
                          (call ,save ,gv ,file)))))))
 
@@ -25,4 +25,4 @@
   `(call (gethash ',var savers*)
          ,(if (is var expr)
               var
-              `(= ,var ,expr))))
+              `(set ,var ,expr))))
