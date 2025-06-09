@@ -17,7 +17,7 @@
 
 (defssyntax-test compose (sym name)
   (declare (ignore sym))
-  (and (pos #\+ name)
+  (and (find-index #\+ name)
        (len> name 2))) ; This removes + and 1+ from being detected.
 
 (defssyntax-sym-mac compose (sym name)

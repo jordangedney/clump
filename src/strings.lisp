@@ -34,7 +34,7 @@
    using sep (a test)."
   (let test (testify sep)
     (loop for prev = 0 then (+ next 1)
-          for next = (pos test str :start prev)
+          for next = (find-index test str :start prev)
           for substr = (cut str prev next)
           ;; There must be a better way to test for the empty string.
           unless (is 0 (len substr))

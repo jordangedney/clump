@@ -60,7 +60,7 @@
   "Parses an entire argslist and returns a new argslist, along with an
    alist of arguments that need to be destructured."
   (withs (key-args (add-keywords args)
-          pos (pos [mem _ lambda-list-keywords] key-args))
+          pos (find-index [mem _ lambda-list-keywords] key-args))
     (if (null pos)
         (parse-normal key-args)
         (mvb (new-args1 alist1) (parse-normal (cut key-args 0 pos))

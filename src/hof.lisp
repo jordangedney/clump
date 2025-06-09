@@ -33,7 +33,7 @@
   "Equivalent to count-if but 'testifies' TEST first."
   (apply #'count-if (testify f test) xs :allow-other-keys t args))
 
-(def pos (f xs &rest args &key (test #'iso) &allow-other-keys)
+(def find-index (f xs &rest args &key (test #'iso) &allow-other-keys)
   "Equivalent to position-if but 'testifies' TEST first."
   (apply #'position-if (testify f test) xs :allow-other-keys t args))
 
