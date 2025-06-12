@@ -3,13 +3,34 @@
 (in-package :clump)
 (use-syntax :clump)
 
-(def keys (tab)
+;; Define a generic function
+(defgeneric keys (collection))
+
+;; Method for hash tables
+;; (defmethod keys ((collection hash-table))
+;;   (let (result)
+;;     (maphash (lambda (k v) (push k result)) collection)
+;;     result))
+
+(defmethod keys ((collection hash-table))
   "Returns all of the keys of the table TAB."
   (ret result '()
     (maphash (fn (k v)
-		 (declare (ignore v))
-		 (push k result))
-	     tab)))
+		           (declare (ignore v))
+		           (push k result))
+	           tab)))
+
+;; Method for plists (assuming a proper plist)
+(defmethod keys ((collection list))
+  (loop for (k v) on collection by #'cddr collect k))
+
+;; (def keys (tab)
+;;   "Returns all of the keys of the table TAB."
+;;   (ret result '()
+;;     (maphash (fn (k v)
+;; 		           (declare (ignore v))
+;; 		           (push k result))
+;; 	     tab)))
 
 (def vals (tab)
   "Returns all of the values stored in table TAB."
